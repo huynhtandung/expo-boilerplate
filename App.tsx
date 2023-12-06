@@ -1,10 +1,11 @@
-import HomeScreen from "@/screens/HomeScreen";
-import SettingsScreen from "@/screens/SettingsScreen";
-import StoriesScreen from "@/screens/StoriesScreen";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import { NavigationContainer } from '@react-navigation/native'
 
-const Tab = createMaterialTopTabNavigator();
+import HomeScreen from '@/screens/HomeScreen'
+import SettingsScreen from '@/screens/SettingsScreen'
+import StoriesScreen from '@/screens/StoriesScreen'
+
+const Tab = createMaterialTopTabNavigator()
 
 export default function App() {
   return (
@@ -15,5 +16,5 @@ export default function App() {
         <Tab.Screen name="Stories" component={StoriesScreen} />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }

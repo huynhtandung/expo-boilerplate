@@ -1,5 +1,6 @@
-import Layout from "@/components/Layout";
-import { Text, View } from "react-native";
+import { Text, View } from 'react-native'
+
+import Layout from '@/components/Layout'
 
 const SettingsScreen = () => {
   return (
@@ -7,14 +8,13 @@ const SettingsScreen = () => {
       <View
         style={{
           flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
         <Text>Settings</Text>
       </View>
     </Layout>
-  );
-};
+  )
+}
 
-export default SettingsScreen;
+export default SettingsScreen
