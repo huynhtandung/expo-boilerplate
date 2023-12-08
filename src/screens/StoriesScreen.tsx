@@ -1,8 +1,8 @@
 import { Text, View } from 'react-native'
 
-import Layout from '@/components/Layout'
+import { Layout } from '@/components'
 
-const StoriesScreen = () => {
+export const StoriesScreen = () => {
   return (
     <Layout>
       <View
@@ -10,11 +10,10 @@ const StoriesScreen = () => {
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-        }}>
+        }}
+      >
         <Text>Stories</Text>
       </View>
     </Layout>
   )
 }
-
-export default StoriesScreen

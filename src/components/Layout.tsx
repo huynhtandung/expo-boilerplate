@@ -1,22 +1,26 @@
 import { ReactElement } from 'react'
-import { StatusBar, View } from 'react-native'
+import { StatusBar, StyleProp, View, ViewStyle } from 'react-native'
 
 interface Props {
   children: ReactElement | ReactElement[]
+  style?: StyleProp<ViewStyle>
 }
 
-const Layout = ({ children }: Props) => {
+export const Layout = ({ children, style }: Props) => {
   const statusBarHeight = StatusBar.currentHeight
 
   return (
     <View
-      style={{
-        flex: 1,
-        paddingTop: statusBarHeight,
-      }}>
+      style={[
+        {
+          flex: 1,
+          paddingTop: statusBarHeight,
+          backgroundColor: '#fff',
+        },
+        style,
+      ]}
+    >
       {children}
     </View>
   )
 }
-
-export default Layout
